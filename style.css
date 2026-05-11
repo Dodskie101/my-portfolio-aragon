@@ -100,7 +100,6 @@ nav{
 .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 section{min-height:100vh;padding:110px 3.5rem 80px;position:relative}
-
 #home{
   display:grid;grid-template-columns:1fr 1fr;
   align-items:stretch;padding:0;min-height:100vh;
@@ -430,12 +429,19 @@ footer{
   .nav-links a{font-size:.9rem}
   .nav-cta{text-align:center}
   section{padding:100px 1.5rem 60px}
-  #home{grid-template-columns:1fr}
-  .home-left{padding:110px 1.5rem 40px;border-right:none}
+  #home{display:flex;flex-direction:column}
+  .home-left{
+    padding:110px 1.5rem 20px;
+    border-right:none;
+    display:flex;flex-direction:column;
+    order:1;
+  }
+  .home-btns{order:3;margin-top:1.5rem}
   .home-right{
     display:flex;
-    padding:2rem 1.5rem;
+    padding:1.5rem;
     min-height:auto;
+    order:2;
   }
   .home-photo{max-height:320px;margin-top:0}
   .home-stats{display:none}
@@ -450,7 +456,9 @@ footer{
 @media(max-width:480px){
   nav{padding:0 1rem}
   section{padding:90px 1rem 50px}
-  .home-left{padding:95px 1rem 50px}
+  .home-left{padding:95px 1rem 20px}
+  .home-right{padding:1rem}
+  .home-photo{max-height:260px}
   .home-name{font-size:clamp(2rem,10vw,2.8rem)}
   .home-btns{flex-direction:column}
   .btn{width:100%;justify-content:center}
