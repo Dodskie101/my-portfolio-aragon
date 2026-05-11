@@ -336,19 +336,9 @@ section{min-height:100vh;padding:110px 3.5rem 80px;position:relative}
   display:block;
   border-radius:50%;
 }
-.cc-meta{
-  flex:1;min-width:0;overflow:hidden;
-}
-.cc-type{
-  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:.2rem;
-}
-.cc-val{
-  font-size:.8rem;color:var(--text);
-  word-break:break-all;white-space:normal;
-}
+.cc-meta{flex:1;min-width:0}
 .cc-type{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
-.cc-val{font-size:.8rem;color:var(--text);word-break:break-all}
+.cc-val{font-size:.78rem;color:var(--text);word-break:break-all}
 
 .form-title{
   font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
@@ -441,8 +431,14 @@ footer{
   .nav-cta{text-align:center}
   section{padding:100px 1.5rem 60px}
   #home{grid-template-columns:1fr}
-  .home-right{display:none}
-  .home-left{padding:110px 1.5rem 60px;border-right:none}
+  .home-left{padding:110px 1.5rem 40px;border-right:none}
+  .home-right{
+    display:flex;
+    padding:2rem 1.5rem;
+    min-height:auto;
+  }
+  .home-photo{max-height:320px;margin-top:0}
+  .home-stats{display:none}
   .about-layout,.bg-layout,.contact-layout{grid-template-columns:1fr;gap:2rem}
   .about-spacer{display:none}
   .proj-grid{grid-template-columns:1fr}
